@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -135,17 +139,12 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 #베이스디렉토리의 미디어디렉토리로 미디어 파일을 모음
 
 MEDIA_URL='/media/'
-<<<<<<< HEAD
-<<<<<<< HEAD
-#이런식으로 url을 설계함
-=======
+
 #이런식으로 url을 설계함
 
+
 # Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
->>>>>>> tempbranch
-=======
-#이런식으로 url을 설계함
->>>>>>> e9cc1abd7658024888183c027be2e58eea755d0b
+
+
+
+
