@@ -136,6 +136,7 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 MEDIA_URL='/media/'
 <<<<<<< HEAD
+<<<<<<< HEAD
 #이런식으로 url을 설계함
 =======
 #이런식으로 url을 설계함
@@ -145,3 +146,6 @@ import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 >>>>>>> tempbranch
+=======
+#이런식으로 url을 설계함
+>>>>>>> e9cc1abd7658024888183c027be2e58eea755d0b
